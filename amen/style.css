@@ -1,0 +1,71 @@
+/* Fondo de la página */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #9fe6b4);
+    margin: 0;
+    padding: 40px 20px;
+}
+
+/* Formulario */
+.formulario {
+    width: 350px;
+    margin: auto;
+    background-color: #f0eaea;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(84, 217, 93, 0.15);
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* Textos */
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #141313;
+    font-weight: bold;
+}
+
+/* Campos */
+input {
+    width: 100%;
+    padding: 11px;
+    box-sizing: border-box;
+    border: 1px solid #030303;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Efecto al seleccionar un campo */
+input:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 5px rgba(108, 99, 255, 0.3);
+}
+
+/* Botón */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 25px;
+    background-color: #0cca55;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Cambio del botón */
+button:hover {
+    background-color: #070807;
+    transform: translateY(-2px);
+}
