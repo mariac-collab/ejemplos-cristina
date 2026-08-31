@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mundo animal</title>
+    <title>Mundo Animal - Panel de Administración</title>
     <style>
         html {
             scroll-behavior: smooth;
@@ -17,7 +17,7 @@
             color: #000000;
         }
 
-        /* BARRA SUPERIOR FIJA (ESQUINA SUPERIOR DERECHA) */
+        /* BARRA SUPERIOR FIJA EN LA ESQUINA SUPERIOR DERECHA */
         .topbar {
             position: fixed;
             top: 0;
@@ -36,7 +36,7 @@
         .topbar-user {
             display: flex;
             gap: 15px;
-            margin-right: 30px;
+            margin-right: 20px;
         }
 
         .topbar-user a {
@@ -104,7 +104,7 @@
             font-weight: bold;
         }
 
-        /* Estilos para la tabla */
+        /* REQUERIMIENTO DIAPOSITIVA: Estilos para la Tabla Semántica */
         table {
             width: 100%;
             border-collapse: collapse;
@@ -125,7 +125,7 @@
             color: white;
         }
 
-        /* Estilos para formularios */
+        /* REQUERIMIENTO DIAPOSITIVA: Estilos para Formulario Accesible */
         form div {
             margin-bottom: 15px;
         }
@@ -177,11 +177,11 @@
 </head>
 <body>
 
-    <!-- BARRA SUPERIOR FIJA CON BOTONES EN LA ESQUINA -->
+    <!-- INICIO DE SESIÓN Y REGISTRO EN LA ESQUINA SUPERIOR DERECHA -->
     <div class="topbar">
         <div class="topbar-user">
-            <a href="#contacto"> Iniciar Sesión</a>
-            <a href="#registro">Registrarse</a>
+            <a href="#contacto">🔑 Iniciar Sesión</a>
+            <a href="#registro">📝 Registrarse</a>
         </div>
     </div>
 
@@ -191,8 +191,7 @@
             <a href="#favoritos">Favoritos</a>
             <a href="#datos">Dato Curioso</a>
             <a href="#cuidados">Cuidados</a>
-            <a href="#panel">Panel</a>
-            <a href="#registro">Registrarse</a>
+            <a href="#panel">Inventario</a>
             <a href="#contacto">Contacto</a>
             <a href="#enlaces">Enlaces</a>
         </nav>
@@ -242,40 +241,7 @@
             </ol>
         </div>
 
-        <!-- FORMULARIO DE REGISTRO -->
-        <div class="card" id="registro">
-            <h2>Crear una Cuenta (Registro)</h2>
-            <form action="#" method="POST">
-                <div>
-                    <label for="reg_nombre">Nombre Completo:</label>
-                    <input type="text" id="reg_nombre" name="reg_nombre" placeholder="Ej. Maria Cristina" required>
-                </div>
-                <div>
-                    <label for="reg_correo">Correo Electrónico:</label>
-                    <input type="email" id="reg_correo" name="reg_correo" placeholder="ejemplo@correo.com" required>
-                </div>
-                <div>
-                    <label for="reg_password">Contraseña:</label>
-                    <input type="password" id="reg_password" name="reg_password" placeholder="Crea una contraseña segura" required>
-                </div>
-                <div>
-                    <label for="reg_confirm_password">Confirmar Contraseña:</label>
-                    <input type="password" id="reg_confirm_password" name="reg_confirm_password" placeholder="Repite tu contraseña" required>
-                </div>
-                <div>
-                    <label for="reg_rol">Tipo de Usuario:</label>
-                    <select id="reg_rol" name="reg_rol" required>
-                        <option value="">-- Selecciona una opción --</option>
-                        <option value="estudiante">Estudiante</option>
-                        <option value="usuario">Usuario General</option>
-                        <option value="administrador">Administrador</option>
-                    </select>
-                </div>
-                <button type="submit">Registrarse</button>
-            </form>
-        </div>
-
-        <!-- Tabla Semántica de Servicios / Inventario -->
+        <!-- TAREA 1 DE LA DIAPOSITIVA: TABLA SEMÁNTICA DE INVENTARIO / SERVICIOS -->
         <div class="card" id="panel">
             <h2>Tabla de Servicios e Inventario</h2>
             <table>
@@ -316,7 +282,40 @@
             </table>
         </div>
 
-        <!-- FORMULARIO DE CONTACTO -->
+        <!-- FORMULARIO DE REGISTRO (Opcional) -->
+        <div class="card" id="registro">
+            <h2>Crear una Cuenta (Registro)</h2>
+            <form action="#" method="POST">
+                <div>
+                    <label for="reg_nombre">Nombre Completo:</label>
+                    <input type="text" id="reg_nombre" name="reg_nombre" placeholder="Ej. Maria Cristina" required>
+                </div>
+                <div>
+                    <label for="reg_correo">Correo Electrónico:</label>
+                    <input type="email" id="reg_correo" name="reg_correo" placeholder="ejemplo@correo.com" required>
+                </div>
+                <div>
+                    <label for="reg_password">Contraseña:</label>
+                    <input type="password" id="reg_password" name="reg_password" placeholder="Crea una contraseña segura" required>
+                </div>
+                <div>
+                    <label for="reg_confirm_password">Confirmar Contraseña:</label>
+                    <input type="password" id="reg_confirm_password" name="reg_confirm_password" placeholder="Repite tu contraseña" required>
+                </div>
+                <div>
+                    <label for="reg_rol">Tipo de Usuario:</label>
+                    <select id="reg_rol" name="reg_rol" required>
+                        <option value="">-- Selecciona una opción --</option>
+                        <option value="estudiante">Estudiante</option>
+                        <option value="usuario">Usuario General</option>
+                        <option value="administrador">Administrador</option>
+                    </select>
+                </div>
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+
+        <!-- TAREA 2 DE LA DIAPOSITIVA: FORMULARIO INTEGRADO (CONTACTO/MENSAJES) -->
         <div class="card" id="contacto">
             <h2>Formulario de Contacto</h2>
             <form action="#" method="POST">
@@ -337,7 +336,13 @@
         </div>
 
         <!-- Bloque 4: Enlaces útiles -->
-    
+        <div class="card" id="enlaces">
+            <h2>Enlaces Útiles</h2>
+            <p>Si quieres aprender más sobre animales, puedes visitar estos sitios web:</p>
+            <ul>
+                <li><a href="https://www.nationalgeographic.es/animales" target="_blank">National Geographic Animales</a></li>
+                <li><a href="https://es.wikipedia.org/wiki/Animalia" target="_blank">Wikipedia: Reino Animalia</a></li>
+            </ul>
         </div>
     </main>
 
