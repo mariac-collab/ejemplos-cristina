@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Relacional - Control Clínico</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        header, footer {
+            background-color: #1f1f1f;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border: 1px solid #333;
+        }
+
+        .layout-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        main {
+            flex: 3;
+        }
+
+        aside {
+            flex: 1;
+            background-color: #1f1f1f;
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid #333;
+            align-self: flex-start;
+        }
+
+        section {
+            background-color: #1f1f1f;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            border: 1px solid #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        table, th, td {
+            border: 1px solid #444;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        thead {
+            background-color: #2c2c2c;
+        }
+
+        tfoot {
+            background-color: #181818;
+            font-weight: bold;
+        }
+
+        form div {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            color: #bbb;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #444;
+            background-color: #121212;
+            color: #fff;
+            border-radius: 4px;
+        }
+
+        input:focus {
+            outline: 2px solid #00bcd4;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #00bcd4;
+            color: #000;
+            border: none;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #008ba3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. HEADER OBLIGATORIO -->
+    <header>
+        <h1>Dashboard Relacional - Centro de Salud Animal</h1>
+    </header>
+
+    <div class="layout-container">
+        
+        <!-- 2. MAIN OBLIGATORIO (EXACTAMENTE TRES SECCIONES) -->
+        <main>
+            
+            <!-- SECCIÓN 1 DE 3 -->
+            <section id="estado-sistema">
+                <h2>1. Panel de Estado de Servicios</h2>
+                <p>Módulo de supervisión relacional para el control e ingreso de insumos hospitalarios.</p>
+            </section>
+
+            <!-- SECCIÓN 2 DE 3: MATRIZ DE DATOS -->
+            <section id="tabla-servicios">
+                <h2>2. Matriz de Insumos y Medicamentos</h2>
+                
+                <table>
+                    <!-- Elemento colgroup -->
+                    <colgroup>
+                        <col style="background-color: #181818; width: 35%;">
+                        <col style="width: 65%;">
+                    </colgroup>
+                    
+                    <!-- Elemento thead con FUSIÓN 1 (colspan) -->
+                    <thead>
+                        <tr>
+                            <th colspan="2">Catálogo de Suministros Clínicos</th>
+                        </tr>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Insumo Médico</th>
+                        </tr>
+                    </thead>
+                    
+                    <!-- Elemento tbody con FUSIÓN 2 (rowspan) e IDs para dependencia -->
+                    <tbody>
+                        <tr id="item-001">
+                            <!-- Fusión vertical de celda (rowspan) -->
+                            <td rowspan="2">Vacunación e Inmunización</td>
+                            <td>Vacuna Antirrábica (ID: item-001)</td>
+                        </tr>
+                        <tr id="item-002">
+                            <td>Vacuna Pentavalente (ID: item-002)</td>
+                        </tr>
+                    </tbody>
+                    
+                    <!-- Elemento tfoot -->
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">Disponibilidad de Lotes: Verificada</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
+
+            <!-- SECCIÓN 3 DE 3 -->
+            <section id="auditoria">
+                <h2>3. Registro de Accesibilidad y Foco</h2>
+                <p>Navegación controlada mediante el atributo tabindex para la comprobación del estándar WCAG.</p>
+            </section>
+
+        </main>
+
+        <!-- 3. ASIDE OBLIGATORIO (FORMULARIO DEPENDIENTE DE LA TABLA) -->
+        <aside>
+            <h3>Solicitar Dosis</h3>
+            <p><small>Formulario con vinculación lógica a los id de la matriz de datos.</small></p>
+
+            <form action="/pedidos-clinica" method="POST">
+                
+                <!-- Dependencia semántica req-001 -> item-001 -->
+                <div>
+                    <label for="req-001">
+                        Dosis Antirrábica (ID: item-001):
+                    </label>
+                    <!-- tabindex="2" intencional para inversión de flujo por teclado -->
+                    <input type="number" 
+                           id="req-001" 
+                           name="cant_antirrabica" 
+                           min="0" 
+                           tabindex="2" 
+                           required>
+                </div>
+
+                <!-- Dependencia semántica req-002 -> item-002 -->
+                <div>
+                    <label for="req-002">
+                        Dosis Pentavalente (ID: item-002):
+                    </label>
+                    <!-- tabindex="1" intencional para tomar el foco de primer lugar -->
+                    <input type="number" 
+                           id="req-002" 
+                           name="cant_pentavalente" 
+                           min="0" 
+                           tabindex="1" 
+                           required>
+                </div>
+
+                <div>
+                    <button type="submit" tabindex="3">Registrar Dosis</button>
+                </div>
+            </form>
+        </aside>
+
+    </div>
+
+    <!-- 4. FOOTER OBLIGATORIO -->
+    <footer>
+        <p>&copy; 2026 - Taller Evaluativo: Arquitectura Web y Semántica Relacional</p>
+    </footer>
+
+</body>
+</html>
