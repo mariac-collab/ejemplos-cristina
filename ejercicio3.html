@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo animal</title>
+</head>
+<body>
+
+    <!-- Pantalla Flotante de Inicio de Sesión -->
+    <div id="pantalla-login" class="modal-overlay">
+        <div class="card-login-modal">
+            <h2>Iniciar Sesión</h2>
+            <form action="#inicio" method="get" class="form-contacto">
+                <div>
+                    <label for="usuario">Usuario / Correo:</label>
+                    <input type="email" id="usuario" name="usuario" required placeholder="correo@ejemplo.com">
+                </div>
+
+                <div>
+                    <label for="contrasena">Contraseña:</label>
+                    <input type="password" id="contrasena" name="contrasena" required placeholder="••••••••">
+                </div>
+
+                <div>
+                    <button type="submit" class="btn-accion">Iniciar sesión</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Pantalla Verde Claro de Agradecimiento -->
+    <div id="pantalla-agradecimiento" class="modal-overlay">
+        <div class="card-gracias">
+            <h2>🐾 ¡Gracias por tus mensajes y aportes!</h2>
+            <p>Hemos recibido tus comentarios correctamente. Tu aporte ayuda a mejorar la comunidad de Mundo Animal.</p>
+            <a href="#inicio" class="btn-accion">&larr; Volver al Inicio</a>
+        </div>
+    </div>
+
+    <!-- Header Semántico -->
+    <header>
+        <!-- Cuadrito superior de Iniciar Sesión -->
+        <div class="caja-login-top">
+            <strong>Iniciar sesión</strong>
+            <a href="#pantalla-login" class="btn-accion">Iniciar sesión</a>
+        </div>
+
+        <h1>Nuestros amigos de cuatro patas🐾🐈‍⬛</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#favoritos">Favoritos</a></li>
+                <li><a href="#datos">Dato Curioso</a></li>
+                <li><a href="#cuidados">Cuidados</a></li>
+                <li><a href="#tabla-guia">Guía de Especies</a></li>
+                <li><a href="#contacto-seccion">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="layout-principal" id="inicio">
+
+        <!-- Columna Izquierda: Contenido Principal -->
+        <div class="columna-izquierda">
+
+            <!-- Presentación General -->
+            <div class="card">
+                <p>Bienvenidos a <strong>Mundo Animal</strong>, un espacio dedicado a conocer y aprender sobre los animales que habitan nuestro planeta. Aquí podrás descubrir información interesante sobre diferentes especies, sus características, hábitats, alimentación y la importancia de protegerlos. Nuestro objetivo es fomentar el amor, el respeto y el cuidado hacia todos los animales y la naturaleza.</p>
+            </div>
+
+            <!-- Collage de Animales y Frase del Medio Ambiente -->
+            <div class="card">
+                <h2>Biodiversidad y Vida Silvestre</h2>
+                
+                <div class="collage-container"> 
+                    <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba" alt="Gato doméstico"> width="200" height="150">
+                    <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e" alt="Perro en la naturaleza"> width="200"  height="150"
+                    <img src="https://images.unsplash.com/photo-1456926631375-92c8ce872def" alt="Leopardo silvestre"> width="200" height="150">
+                </div>
+
+                <div class="frase-ambiental">
+                    &ldquo;El planeta no nos pertenece, pertenecemos al planeta. Cuida a quienes no tienen voz.&rdquo;
+                </div>
+            </div>
+
+            <!-- Lista de animales -->
+            <div class="card" id="favoritos">
+                <h2>Conoce a nuestros animales</h2>
+                <p>Aquí está una lista de los animales que son populares:</p>
+                <ul>
+                    <li>León</li><li>Tigre</li><li>Elefante</li>
+                    <li>Jirafa</li><li>Panda</li><li>Delfín</li>
+                    <li>Tiburón</li><li>Águila</li><li>Mariposa</li>
+                    <li>Cocodrilo</li><li>Serpiente</li><li>Oso</li>
+                    <li>Lobo</li><li>Caballo</li><li>Perro</li>
+                    <li>Gato</li>
+                </ul>
+            </div>
+
+            <!-- Dato curioso -->
+            <div class="card" id="datos">
+                <h2>Un Dato curioso sobre los perros</h2>
+                <p>¿Sabías que el olfato de un perro es entre <span class="resaltado">1,000 y 1,000</span> veces más sensible que el nuestro?</p>
+                <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1" alt="Perro en el parque">
+            </div>
+
+            <!-- Pasos para cuidar a la mascota -->
+            <div class="card" id="cuidados">
+                <h2>Pasos para cuidar a tu mascota</h2>
+                <ol>
+                    <li>Darle comida saludable y agua fresca todos los días.</li>
+                    <li>Llevarlo al veterinario para sus vacunas y cuando se sienta mal.</li>
+                    <li>Darle mucho amor, paseos y tiempo de juego.</li>
+                </ol>
+            </div>
+
+            <!-- Tabla Semántica -->
+            <div class="card" id="tabla-guia">
+                <h2>Guía Rápida de Clasificación y Atenciones</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Especie</th>
+                            <th>Dieta Básica</th>
+                            <th>Chequeo Médico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">Mamíferos Domésticos</td>
+                            <td>Perro / Gato</td>
+                            <td>Alimento balanceado y proteína</td>
+                            <td>Semestral</td>
+                        </tr>
+                        <tr>
+                            <td>Caballo</td>
+                            <td>Forraje y heno</td>
+                            <td>Anual</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><strong>Recomendación General:</strong> Mantener siempre agua limpia a libre disposición.</td>
+                            <td colspan="2"><strong>Atención Prioritaria:</strong> Vacunación anual obligatoria.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Enlaces útiles -->
+            <div class="card" id="enlaces">
+                <h2>Enlaces Útiles</h2>
+                <p>Si quieres aprender más sobre animales, puedes visitar estos sitios web:</p>
+                <ul>
+                    <li><a href="https://www.nationalgeographic.es/animales" target="_blank">National Geographic Animales</a></li>
+                    <li><a href="https://es.wikipedia.org/wiki/Animalia" target="_blank">Wikipedia: Reino Animalia</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Columna Derecha: Formulario de Contacto -->
+        <div class="columna-derecha" id="contacto-seccion">
+            <div class="card form-card">
+                <h2>Formulario de Contacto</h2>
+                <p>Déjanos un mensaje o consulta sobre tus mascotas:</p>
+                
+                <form action="#pantalla-agradecimiento" method="get" class="form-contacto">
+                    <div>
+                        <label for="nombre">Nombre Completo:</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                    </div>
+
+                    <div>
+                        <label for="correo-contacto">Correo Electrónico:</label>
+                        <input type="email" id="correo-contacto" name="correo" required placeholder="correo@ejemplo.com">
+                    </div>
+
+                    <div>
+                        <label for="tipo-consulta">Motivo de Consulta:</label>
+                        <select id="tipo-consulta" name="tipo-consulta">
+                            <option value="adopcion">Información de Adopción</option>
+                            <option value="cuidados">Consejos de Cuidados</option>
+                            <option value="sugerencia">Sugerencia para la Página</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="btn-accion">Enviar Mensaje &rarr;</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Pie de Página Semántico -->
+    <footer>
+        <p><strong>Información del Estudiante y Proyecto:</strong></p>
+        <p>
+            <strong>Nombre:</strong> María Cristina Nieto &vert; 
+            <strong>Grado:</strong> 10-6 &vert; 
+            <strong>Fecha:</strong> 2026 &vert; 
+            <strong>Colegio:</strong> José Roberto Vásquez &vert; 
+            <strong>Área:</strong> Desarrollo de software
+        </p>
+        <p><i>Esta es una página creada con HTML y CSS como parte de mi aprendizaje en programación &copy; 2026.</i></p>
+    </footer>
+
+</body>
+</html>
