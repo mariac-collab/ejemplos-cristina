@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    color: #2c3e50;
+    background-color: #f4f7f6;
+    line-height: 1.6;
+}
+header {
+    background-color: #2e7d32;
+    color: white;
+    padding: 15px 25px;
+    border-bottom: 4px solid #1b5e20;
+}
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.marca-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.logo-pagina {
+    width: 75px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+header h1 {
+    font-size: 1.3rem;
+    margin: 0;
+    font-weight: bold;
+}
+.btn-login-box {
+    display: inline-block;
+    border: 2px solid #ffffff;
+    padding: 6px 14px;
+    border-radius: 6px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.85rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease;
+}
+.btn-login-box:hover {
+    background-color: #ffffff;
+    color: #2e7d32;
+}
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin-top: 5px;
+}
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+header nav a:hover {
+    text-decoration: underline;
+}
+.usuario-logged { 
+    display: none; 
+}
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.modal-overlay:target {
+    display: flex;
+}
+.card-login-modal {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+.card-login-modal h2 {
+    margin-bottom: 15px;
+    color: #2e7d32;
+}
+.layout-principal {
+    display: flex;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+.columna-izquierda { 
+    flex: 2; 
+}
+.columna-derecha { 
+    flex: 1; 
+}
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.card h2 {
+    color: #2e7d32;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
+.collage-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+.collage-container img {
+    border-radius: 6px;
+    object-fit: cover;
+}
+.frase-ambiental {
+    font-style: italic;
+    background-color: #e8f5e9;
+    color: #1b5e20;
+    padding: 10px 15px;
+    border-left: 4px solid #2e7d32;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+.card ul, .card ol {
+    margin-left: 20px;
+    margin-top: 8px;
+}
+.card li {
+    margin-bottom: 4px;
+}
+.destacado { 
+    color: #d32f2f; 
+}
+#texto-destacado { 
+    color: #1b5e20; 
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.resaltado {
+    background-color: #fff3cd;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+th, td {
+    border: 1px solid #c8e6c9;
+    padding: 10px;
+    text-align: left;
+    font-size: 0.9rem;
+}
+th {
+    background-color: #e8f5e9;
+    color: #1b5e20;
+}
+.form-contacto div {
+    margin-bottom: 12px;
+}
+.form-contacto label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 4px;
+    font-size: 0.9rem;
+}
+.form-contacto input,
+.form-contacto select,
+.form-contacto textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+.btn-accion {
+    display: inline-block;
+    background-color: #2e7d32;
+    color: white;
+    padding: 9px 18px;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.btn-accion:hover {
+    background-color: #1b5e20;
+}
+.btn-secundario-sm {
+    color: #ffffff;
+    background-color: rgba(255,255,255,0.2);
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+footer {
+    background-color: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+footer p {
+    margin-bottom: 5px;
+}
