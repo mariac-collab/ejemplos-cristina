@@ -26,6 +26,26 @@ header {
     align-items: center;
     gap: 15px;
 }
+
+/* Posicionamiento del logo e insignia */
+.logo-wrap {
+    position: relative;
+    display: inline-block;
+}
+
+.insignia {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #e53935;
+    color: white;
+    font-size: 0.65rem;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
 .logo-pagina {
     width: 75px;
     height: 48px;
@@ -54,13 +74,26 @@ header h1 {
     background-color: #ffffff;
     color: #2e7d32;
 }
+
+/* Menú con Float y Clear */
 header nav ul {
     list-style: none;
-    display: flex;
-    gap: 20px;
     padding: 0;
+    margin: 0;
     margin-top: 5px;
 }
+
+header nav li {
+    float: left;
+    margin-right: 20px;
+}
+
+header nav::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
 header nav a {
     color: #ffffff;
     text-decoration: none;
@@ -70,6 +103,27 @@ header nav a {
 header nav a:hover {
     text-decoration: underline;
 }
+
+/* AGREGADO: Estilos para la barra de navegación secundaria */
+.barra-navegacion-rapida {
+    background-color: #e8f5e9;
+    padding: 8px 25px;
+    font-size: 0.85rem;
+    border-bottom: 1px solid #c8e6c9;
+}
+.contenedor-navegacion {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.barra-navegacion-rapida a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: bold;
+}
+.barra-navegacion-rapida a:hover {
+    text-decoration: underline;
+}
+
 .usuario-logged { 
     display: none; 
 }
@@ -221,7 +275,7 @@ th {
     font-size: 0.8rem;
 }
 footer {
-    background-color: #1b5e20;
+    background-color: #287b2e;
     color: white;
     text-align: center;
     padding: 20px;
